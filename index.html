@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Pierina 💕</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 29%22><text y=%2224%22 font-size=%2228%22>💗</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     TOKENS — paleta y tipografía
+     ============================================================ */
+  :root{
+    --pink-light:#FFE3EF;
+    --pink:#F45B9E;
+    --pink-deep:#C93571;
+    --blue-light:#DCF1FB;
+    --blue:#6EC3E8;
+    --blue-deep:#2E86AB;
+    --cream:#FFF9FB;
+    --plum:#4A2545;
+    --plum-soft:#8A5D7E;
+    --gold:#E8B84B;
+    --gold-light:#F5D98C;
+    --white:#ffffff;
+
+    /* colores de categoría */
+    --cat-triste:#8AC4E8;      --cat-triste-b:#4FA0D0;
+    --cat-estres:#A3D9AE;      --cat-estres-b:#5CAE72;
+    --cat-dudas:#F2A6C5;       --cat-dudas-b:#E15E96;
+    --cat-dificil:#C9A8E0;     --cat-dificil-b:#9B6DC4;
+    --cat-abrumada:#F5D98C;    --cat-abrumada-b:#D9A93E;
+
+    --shadow-soft: 0 10px 30px rgba(201, 53, 113, 0.12);
+    --radius-lg: 28px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Nunito', sans-serif;
+    color:var(--plum);
+    background:
+      radial-gradient(circle at 15% 0%, var(--blue-light) 0%, transparent 45%),
+      radial-gradient(circle at 90% 10%, var(--pink-light) 0%, transparent 50%),
+      var(--cream);
+    overflow-x:hidden;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    margin:0 0 .4em 0;
+    color:var(--plum);
+  }
+  p{line-height:1.65;}
+  .eyebrow{
+    font-family:'Nunito';
+    font-weight:800;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    font-size:.72rem;
+    color:var(--pink-deep);
+  }
+  section{padding: 72px 24px; max-width:1080px; margin:0 auto;}
+  .center{text-align:center;}
+  button{font-family:'Nunito'; cursor:pointer; border:none;}
+  button:focus-visible, a:focus-visible, .note:focus-visible{
+    outline:3px solid var(--blue-deep);
+    outline-offset:3px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important;}
+  }
+
+  /* ============================================================
+     NAVEGACIÓN
+     ============================================================ */
+  .navbar{
+    position:sticky; top:0; z-index:60;
+    display:flex; align-items:center; gap:2px;
+    padding:12px 16px;
+    background:rgba(255,249,251,0.9);
+    backdrop-filter: blur(10px);
+    border-bottom:1px solid rgba(201,53,113,.12);
+    overflow-x:auto;
+    white-space:nowrap;
+  }
+  .navbar .brand{
+    font-family:'Fraunces'; font-weight:600; font-size:1rem;
+    color:var(--pink-deep); margin-right:12px;
+  }
+  .navbar a{
+    font-family:'Nunito'; font-weight:700; font-size:.83rem;
+    color:var(--plum-soft); text-decoration:none;
+    padding:8px 14px; border-radius:999px;
+  }
+  .navbar a:hover, .navbar a:focus-visible{
+    background:var(--pink-light); color:var(--pink-deep);
+  }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero{
+    text-align:center;
+    padding: 84px 24px 24px;
+    position:relative;
+  }
+  .hero .eyebrow{display:block; margin-bottom:14px;}
+  .hero h1{
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    line-height:1.08;
+  }
+  .hero h1 em{
+    font-style:italic;
+    color:var(--pink-deep);
+  }
+  .hero p.lead{
+    max-width:520px;
+    margin:18px auto 0;
+    color:var(--plum-soft);
+    font-size:1.08rem;
+  }
+  .float-hearts span{
+    position:absolute;
+    font-size:1.4rem;
+    opacity:.55;
+    animation: drift 9s ease-in-out infinite;
+  }
+  @keyframes drift{
+    0%,100%{ transform:translateY(0) rotate(0deg); }
+    50%{ transform:translateY(-18px) rotate(8deg); }
+  }
+
+  /* ============================================================
+     CONTADOR DE RELACIÓN
+     ============================================================ */
+  .counter-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap:12px;
+    max-width:640px;
+    margin: 28px auto 0;
+  }
+  .counter-box{
+    background:var(--white);
+    border-radius:18px;
+    padding:16px 8px;
+    box-shadow: var(--shadow-soft);
+  }
+  .counter-box .num{
+    display:block;
+    font-family:'Fraunces', serif;
+    font-size:1.9rem;
+    font-weight:600;
+    color:var(--pink-deep);
+    font-variant-numeric: tabular-nums;
+  }
+  .counter-box .label{
+    display:block;
+    font-size:.68rem;
+    text-transform:uppercase;
+    letter-spacing:.06em;
+    color:var(--plum-soft);
+    margin-top:4px;
+  }
+
+  /* ============================================================
+     NUESTRA HISTORIA
+     ============================================================ */
+  .story-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap:22px;
+    margin-top:32px;
+  }
+  .story-card{
+    background: linear-gradient(180deg, var(--white), var(--pink-light) 220%);
+    border-radius: var(--radius-lg);
+    padding:30px 26px;
+    box-shadow: var(--shadow-soft);
+  }
+  .story-icon{ font-size:1.6rem; }
+  .story-card h3{ margin-top:10px; font-size:1.15rem; }
+  .story-card p{ color:var(--plum-soft); font-size:.96rem; }
+
+  /* ============================================================
+     FRASCO DE VIDRIO — pieza central
+     ============================================================ */
+  .jar-wrap{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 20px 24px 10px;
+  }
+  .jar-instructions{
+    max-width:460px;
+    text-align:center;
+    color:var(--plum-soft);
+    margin-bottom: 28px;
+  }
+  .jar-stage{
+    position:relative;
+    width:min(92vw, 520px);
+    aspect-ratio: 32 / 34;
+  }
+  .jar-svg{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+    filter: drop-shadow(0 22px 40px rgba(74,37,69,0.18));
+  }
+  .jar-shine{
+    opacity:.55;
+  }
+  .notes-layer{
+    position:absolute; inset:0;
+    width:100%; height:100%;
+  }
+  .note{
+    position:absolute;
+    width: 34px; height: 26px;
+    border-radius: 4px;
+    background: linear-gradient(160deg, var(--n-color, var(--pink)) 0%, var(--n-color-b, var(--pink-deep)) 100%);
+    box-shadow: 0 3px 8px rgba(74,37,69,0.25), inset 0 0 0 1px rgba(255,255,255,.35);
+    transform: translate(-50%,-50%) rotate(var(--rot,0deg));
+    animation: bob 5s ease-in-out infinite;
+    animation-delay: var(--delay, 0s);
+    padding:0;
+  }
+  .note::before{
+    content:"";
+    position:absolute; inset:4px;
+    border:1px dashed rgba(255,255,255,.55);
+    border-radius:2px;
+  }
+  .note:hover, .note:focus-visible{
+    transform: translate(-50%,-50%) rotate(var(--rot,0deg)) scale(1.18);
+    filter: brightness(1.08);
+  }
+  .note:active{ transform: translate(-50%,-50%) rotate(var(--rot,0deg)) scale(0.95); }
+  @keyframes bob{
+    0%,100%{ margin-top:0px; }
+    50%{ margin-top:-9px; }
+  }
+  .jar-count{
+    margin-top:22px;
+    font-size:.95rem;
+    color:var(--plum-soft);
+  }
+
+  /* ============================================================
+     LEYENDA DE COLORES
+     ============================================================ */
+  .legend{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap:16px;
+    margin-top: 34px;
+  }
+  .legend-card{
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px 18px;
+    box-shadow: var(--shadow-soft);
+    border-top: 6px solid var(--card-color, var(--pink));
+    text-align:left;
+  }
+  .legend-card .dot{
+    width:16px; height:16px; border-radius:50%;
+    background:var(--card-color, var(--pink));
+    display:inline-block; margin-right:8px;
+  }
+  .legend-card h3{
+    font-size:1rem;
+    display:flex; align-items:center;
+    margin-bottom:8px;
+  }
+  .legend-card p{
+    font-size:.92rem;
+    color:var(--plum-soft);
+    margin:0;
+  }
+
+  /* ============================================================
+     CARRUSEL DE FOTOS
+     ============================================================ */
+  .carousel{
+    display:flex; align-items:center; gap:12px;
+    max-width:640px; margin: 30px auto 0;
+  }
+  .car-track-wrap{
+    flex:1; overflow:hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+  }
+  .car-track{
+    display:flex;
+    transition: transform .5s cubic-bezier(.3,.9,.3,1);
+  }
+  .car-slide{
+    flex: 0 0 100%;
+    position:relative;
+    aspect-ratio: 4/3;
+    background: linear-gradient(135deg, var(--pink-light), var(--blue-light));
+  }
+  .car-slide img{
+    width:100%; height:100%; object-fit:cover; display:block;
+  }
+  .car-slide .caption{
+    position:absolute; left:0; right:0; bottom:0;
+    padding: 34px 18px 14px;
+    background: linear-gradient(0deg, rgba(74,37,69,.65), transparent);
+    color:var(--white);
+    font-size:.92rem;
+    text-align:left;
+  }
+  .car-btn{
+    flex:0 0 auto;
+    width:42px; height:42px;
+    border-radius:50%;
+    background: var(--white);
+    color:var(--pink-deep);
+    font-size:1.4rem;
+    box-shadow: var(--shadow-soft);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .car-btn:hover{ background:var(--pink); color:var(--white); }
+  .car-dots{
+    display:flex; justify-content:center; gap:7px;
+    margin-top:16px;
+  }
+  .car-dot{
+    width:8px; height:8px; border-radius:50%;
+    background: var(--pink-light);
+    padding:0;
+  }
+  .car-dot.active{ background:var(--pink-deep); width:22px; border-radius:5px; transition: width .25s ease; }
+
+  /* ============================================================
+     GROUNDING 5-4-3-2-1 y RELAJACIÓN MUSCULAR
+     ============================================================ */
+  .grounding-box{
+    min-height:88px;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    margin: 16px 0 14px;
+  }
+  .grounding-num{
+    font-family:'Fraunces', serif;
+    font-size:2.3rem;
+    font-weight:600;
+    color:var(--pink-deep);
+    line-height:1;
+  }
+  .grounding-text{
+    margin:6px 0 0;
+    font-size:.9rem;
+    color:var(--plum-soft);
+    max-width:220px;
+  }
+
+  /* ============================================================
+     MODAL — notita abierta
+     ============================================================ */
+  .modal-overlay{
+    position:fixed; inset:0;
+    background: rgba(74,37,69,0.45);
+    backdrop-filter: blur(3px);
+    display:flex; align-items:center; justify-content:center;
+    padding:24px;
+    z-index:100;
+    opacity:0; pointer-events:none;
+    transition: opacity .25s ease;
+  }
+  .modal-overlay.open{ opacity:1; pointer-events:auto; }
+  .modal-card{
+    position:relative;
+    background: var(--white);
+    max-width: 420px; width:100%;
+    border-radius: var(--radius-lg);
+    padding: 40px 32px 32px;
+    text-align:center;
+    box-shadow: 0 30px 60px rgba(0,0,0,.25);
+    transform: scale(.7) rotate(-4deg);
+    opacity:0;
+    transition: transform .45s cubic-bezier(.2,1.4,.4,1), opacity .3s ease;
+    overflow:hidden;
+  }
+  .modal-overlay.open .modal-card{ transform: scale(1) rotate(0deg); opacity:1; }
+  .modal-card .tag{
+    display:inline-block;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    padding:5px 12px;
+    border-radius:999px;
+    color:var(--white);
+    background: var(--tag-color, var(--pink));
+    margin-bottom:16px;
+  }
+  .modal-card p.msg{
+    font-family:'Fraunces', serif;
+    font-size:1.28rem;
+    line-height:1.5;
+    color:var(--plum);
+    margin: 0 0 8px;
+  }
+  .modal-close{
+    position:absolute; top:14px; right:14px;
+    width:34px; height:34px;
+    border-radius:50%;
+    background: var(--pink-light);
+    color:var(--pink-deep);
+    font-size:1.1rem;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .modal-close:hover{ background:var(--pink); color:var(--white); }
+  .spark{
+    position:absolute;
+    top:50%; left:50%;
+    width:6px; height:6px;
+    border-radius:50%;
+    background: var(--gold);
+    box-shadow: 0 0 6px 1px var(--gold-light);
+    opacity:0;
+    pointer-events:none;
+  }
+  .modal-overlay.open .spark{
+    animation: spark-fly .9s ease-out forwards;
+  }
+  @keyframes spark-fly{
+    0%{ opacity:1; transform: translate(-50%,-50%) scale(1); }
+    100%{ opacity:0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(.2); }
+  }
+
+  /* ============================================================
+     SECCIÓN: para escribir tú (bandeja de admin sencilla)
+     ============================================================ */
+  .divider{
+    display:flex; align-items:center; gap:14px;
+    max-width:1080px; margin: 10px auto 0; padding:0 24px;
+    color:var(--plum-soft);
+  }
+  .divider hr{ flex:1; border:none; border-top:1px solid rgba(74,37,69,.15); }
+
+  /* ============================================================
+     ACTIVIDADES — grid escalable
+     ============================================================ */
+  .activities-title{ text-align:center; margin-bottom:8px;}
+  .activities-lead{ text-align:center; color:var(--plum-soft); max-width:520px; margin:0 auto 36px;}
+  .activities-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:22px;
+  }
+  .activity-card{
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    box-shadow: var(--shadow-soft);
+    text-align:center;
+  }
+  .activity-card h3{ font-size:1.15rem; }
+  .activity-card p{ color:var(--plum-soft); font-size:.94rem; }
+
+  /* --- Respiración --- */
+  .breathe-circle{
+    width:120px; height:120px;
+    margin: 18px auto 14px;
+    border-radius:50%;
+    background: radial-gradient(circle at 35% 30%, var(--blue-light), var(--blue) 70%);
+    box-shadow: 0 10px 26px rgba(46,134,171,.35);
+    display:flex; align-items:center; justify-content:center;
+    color:var(--white); font-weight:800; font-family:'Nunito';
+    transition: transform 4s ease-in-out;
+  }
+  .breathe-circle.inhale{ transform: scale(1.35); }
+  .breathe-circle.exhale{ transform: scale(1); }
+  .breathe-btn{
+    background: var(--blue-deep);
+    color:var(--white);
+    padding:10px 22px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.9rem;
+  }
+  .breathe-btn:hover{ background: var(--blue); }
+
+  /* --- Papel burbuja --- */
+  .bubble-grid{
+    display:grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap:6px;
+    margin: 16px auto;
+    max-width:280px;
+  }
+  .bubble{
+    aspect-ratio:1;
+    border-radius:50%;
+    background: radial-gradient(circle at 32% 28%, #fff, var(--pink-light) 55%, var(--pink) 100%);
+    box-shadow: inset 0 -2px 3px rgba(201,53,113,.25), 0 2px 4px rgba(0,0,0,.08);
+    transition: transform .12s ease;
+  }
+  .bubble.popped{
+    background: var(--pink-light);
+    box-shadow: inset 0 2px 4px rgba(201,53,113,.35);
+    transform: scale(.82);
+  }
+  .bubble:not(.popped):active{ transform: scale(.9); }
+  .reset-btn{
+    background: var(--pink-deep);
+    color:var(--white);
+    padding:10px 22px;
+    border-radius:999px;
+    font-weight:700;
+    font-size:.9rem;
+  }
+  .reset-btn:hover{ background: var(--pink); }
+
+  footer{
+    text-align:center;
+    padding: 50px 24px 60px;
+    color:var(--plum-soft);
+    font-size:.9rem;
+  }
+  footer .heart-sign{ color:var(--pink-deep); font-size:1.2rem; }
+
+/* ============================================================
+   MEJORAS RESPONSIVE + UI PREMIUM
+   ============================================================ */
+section{width:100%;}
+
+@media (max-width: 760px){
+  .navbar{padding:10px 12px; gap:0;}
+  .navbar .brand{font-size:.9rem; margin-right:6px;}
+  .navbar a{font-size:.76rem; padding:7px 10px;}
+  .hero{padding:64px 18px 18px;}
+  .hero h1{font-size:clamp(2rem,10vw,3rem);}
+  .hero p.lead{font-size:.98rem;}
+  section{padding:56px 16px;}
+  .counter-grid{grid-template-columns:repeat(3,1fr);gap:9px;max-width:460px;}
+  .counter-box{padding:14px 5px;border-radius:16px;}
+  .counter-box .num{font-size:1.55rem;}
+  .counter-box .label{font-size:.62rem;}
+  .story-grid,.activities-grid{grid-template-columns:1fr;}
+  .carousel{gap:7px;}
+  .car-btn{width:38px;height:38px;}
+  .jar-stage{width:min(94vw,430px);}
+  .jar-count{font-size:.86rem;text-align:center;}
+  .legend{grid-template-columns:1fr;}
+  .peru-map-shell{padding:12px;}
+  .map-toolbar{flex-direction:column;align-items:stretch;}
+  .city-list{grid-template-columns:repeat(2,1fr);}
+}
+@media (max-width:420px){
+  .counter-grid{grid-template-columns:repeat(3,1fr);}
+  .counter-box .num{font-size:1.35rem;}
+  .counter-box .label{font-size:.56rem;}
+  .hero h1{font-size:2.05rem;}
+  .jar-stage{width:96vw;}
+  .city-list{grid-template-columns:1fr 1fr;}
+}
+
+/* Historia interactiva */
+.story-grid{perspective:1200px;}
+.story-card{
+  position:relative;
+  min-height:300px;
+  padding:0;
+  background:transparent;
+  box-shadow:none;
+  cursor:pointer;
+}
+.story-card-inner{
+  position:relative;
+  width:100%;
+  min-height:300px;
+  transition:transform .7s cubic-bezier(.2,.8,.2,1);
+  transform-style:preserve-3d;
+}
+.story-card.is-open .story-card-inner{transform:rotateY(180deg);}
+.story-face{
+  position:absolute;inset:0;
+  backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  border-radius:var(--radius-lg);
+  padding:30px 26px;
+  background:linear-gradient(145deg,var(--white),var(--pink-light));
+  box-shadow:var(--shadow-soft);
+  display:flex;flex-direction:column;justify-content:center;
+}
+.story-face.back{
+  transform:rotateY(180deg);
+  background:linear-gradient(145deg,var(--pink-light),var(--white));
+  overflow:auto;
+}
+.story-card:hover .story-face.front{box-shadow:0 18px 42px rgba(201,53,113,.18);}
+.story-hint{margin-top:auto;padding-top:20px;font-size:.78rem;font-weight:800;color:var(--pink-deep);letter-spacing:.04em;}
+.story-face.back p{margin:8px 0 0;color:var(--plum-soft);font-size:.96rem;}
+.story-close-hint{font-size:.74rem;color:var(--plum-soft);margin-top:15px;}
+
+/* Contador: solo años/meses/días */
+.counter-grid{grid-template-columns:repeat(3,minmax(100px,1fr));max-width:560px;}
+.counter-box{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(244,91,158,.1);
+  background:linear-gradient(145deg,#fff,#fff6fa);
+}
+.counter-box::after{
+  content:"";
+  position:absolute;inset:auto -20% -65% -20%;height:80px;
+  background:radial-gradient(circle,var(--pink-light),transparent 68%);
+  opacity:.6;
+}
+
+/* Frasco realista */
+.jar-stage{
+  width:min(92vw,500px);
+  aspect-ratio:1/1.08;
+}
+.jar-real{
+  position:absolute;inset:0;
+  display:flex;justify-content:center;align-items:flex-end;
+  filter:drop-shadow(0 24px 30px rgba(74,37,69,.16));
+}
+.jar-body{
+  position:absolute;
+  left:13%;right:13%;bottom:5%;height:76%;
+  border:3px solid rgba(201,53,113,.42);
+  border-radius:16% 16% 22% 22% / 12% 12% 16% 16%;
+  background:linear-gradient(105deg,rgba(255,255,255,.72),rgba(255,227,239,.30) 42%,rgba(220,241,251,.38));
+  box-shadow:inset 18px 0 22px rgba(255,255,255,.58),inset -18px 0 24px rgba(110,195,232,.12);
+  overflow:hidden;
+}
+.jar-body::before{
+  content:"";position:absolute;left:8%;top:5%;width:11%;height:70%;
+  border-radius:999px;background:rgba(255,255,255,.7);filter:blur(2px);
+}
+.jar-neck{
+  position:absolute;left:28%;right:28%;top:12%;height:15%;
+  border:3px solid rgba(201,53,113,.42);
+  border-bottom:0;border-radius:20px 20px 0 0;
+  background:linear-gradient(90deg,rgba(255,255,255,.68),rgba(255,227,239,.35),rgba(255,255,255,.6));
+}
+.jar-lid{
+  position:absolute;left:25%;right:25%;top:5%;height:11%;
+  z-index:8;
+  border:3px solid rgba(150,78,103,.52);
+  border-radius:12px 12px 8px 8px;
+  background:linear-gradient(180deg,#f6dca0,#d7aa59 45%,#b9853d);
+  box-shadow:0 5px 9px rgba(74,37,69,.22),inset 0 3px 3px rgba(255,255,255,.35);
+  transition:transform .7s cubic-bezier(.2,.9,.2,1), top .7s;
+  transform-origin:85% 90%;
+}
+.jar-lid::before{
+  content:"";position:absolute;left:10%;right:10%;top:20%;height:18%;
+  border-radius:999px;background:rgba(255,255,255,.35);
+}
+.jar-lid.open{top:-1%;transform:translate(18%,-8%) rotate(16deg);}
+.jar-lid-label{
+  position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);
+  white-space:nowrap;background:rgba(255,249,251,.9);padding:6px 12px;border-radius:999px;
+  color:var(--plum-soft);font-size:.72rem;font-weight:800;box-shadow:var(--shadow-soft);
+}
+.jar-body.open .notes-layer{filter:drop-shadow(0 4px 4px rgba(74,37,69,.1));}
+.notes-layer{z-index:3;transition:transform .55s ease;}
+.jar-real .notes-layer .note{animation-duration:3.4s;}
+.jar-real .note{width:36px;height:27px;}
+.jar-real.closed .note{animation-play-state:paused;}
+.jar-real.open .note{animation:noteBounce .8s ease-out both, bob 3.8s ease-in-out infinite;animation-delay:calc(var(--i,0)*.035s),calc(var(--delay,0s) + .8s);}
+.note.dragging{
+  z-index:20;
+  cursor:grabbing;
+  box-shadow:0 9px 16px rgba(74,37,69,.3), inset 0 0 0 1px rgba(255,255,255,.45);
+}
+.note.dragging::before{ border-style:solid; }
+@keyframes noteBounce{
+  0%{transform:translate(-50%,20px) rotate(var(--rot));opacity:.25;}
+  70%{transform:translate(-50%,-9px) rotate(calc(var(--rot) + 4deg));opacity:1;}
+  100%{transform:translate(-50%,0) rotate(var(--rot));}
+}
+.jar-rim{
+  position:absolute;left:23%;right:23%;top:13%;height:8px;border-radius:999px;
+  background:rgba(201,53,113,.22);z-index:4;
+}
+
+.album-viewer{
+  position:fixed; inset:0; z-index:90;
+  display:none; align-items:center; justify-content:center;
+  background:rgba(44,23,41,.72); backdrop-filter:blur(8px);
+  padding:20px;
+}
+.album-viewer.is-open{ display:flex; }
+.album-modal{
+  width:min(92vw,900px); max-height:92vh; overflow:auto;
+  background:var(--white); border-radius:26px; padding:18px 18px 14px;
+  box-shadow:0 28px 80px rgba(44,23,41,.28);
+}
+.album-modal-head{
+  display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:16px;
+}
+.album-modal-head h3{ margin:0; color:var(--plum); }
+.album-close{
+  width:38px; height:38px; border-radius:50%;
+  background:var(--pink-light); color:var(--pink-deep); font-size:1.2rem;
+}
+.album-photos{
+  display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:12px;
+}
+.album-photo{
+  position:relative; border-radius:18px; overflow:hidden; aspect-ratio:4/3;
+  background:var(--pink-light); border:0; padding:0; cursor:pointer;
+}
+.album-photo img{ display:block; width:100%; height:100%; object-fit:cover; }
+.album-photo span{
+  position:absolute; left:8px; right:8px; bottom:8px;
+  padding:6px 8px; border-radius:10px; background:rgba(44,23,41,.62); color:#fff; font-size:.72rem;
+}
+.album-empty{
+  padding:30px; text-align:center; color:var(--plum-soft); background:var(--cream);
+  border-radius:16px; min-height:120px; display:grid; place-items:center;
+}
+@media (max-width:700px){
+  .album-photos{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
+@media (max-width:430px){
+  .album-photos{ grid-template-columns:1fr; }
+}
+
+/* Mapa real de Perú */
+.peru-map-shell{
+  margin:30px auto 0;
+  max-width:900px;
+  background:linear-gradient(145deg,rgba(255,255,255,.94),rgba(255,227,239,.42));
+  border:1px solid rgba(201,53,113,.12);
+  border-radius:28px;
+  padding:18px;
+  box-shadow:var(--shadow-soft);
+}
+.map-toolbar{
+  display:flex;align-items:center;justify-content:space-between;gap:15px;
+  margin-bottom:10px;
+}
+.map-status{font-size:.84rem;color:var(--plum-soft);}
+.map-reset{
+  background:var(--white);color:var(--pink-deep);padding:8px 13px;border-radius:999px;
+  font-weight:800;font-size:.78rem;box-shadow:var(--shadow-soft);
+}
+.peru-map{
+  position:relative;width:100%;height:min(72vh,650px);min-height:410px;
+  overflow:hidden;border-radius:22px;background:linear-gradient(180deg,#edf8fc,#fff9fb);
+}
+.peru-map svg{width:100%;height:100%;display:block;}
+.dept-shape{
+  fill:#fff0f6;stroke:#c95d88;stroke-width:.8;
+  vector-effect:non-scaling-stroke;
+  transition:fill .2s,stroke-width .2s,filter .2s;
+  cursor:pointer;
+}
+.dept-shape:hover,.dept-shape.active{fill:#f7b4cf;stroke-width:2;filter:drop-shadow(0 2px 3px rgba(74,37,69,.18));}
+.dept-shape.visited{fill:#d9f1f8;}
+.dept-label{font:700 7px Nunito,sans-serif;fill:#4a2545;pointer-events:none;text-anchor:middle;}
+.city-marker{cursor:pointer;}
+.city-dot{fill:#c93571;stroke:#fff;stroke-width:1.8;vector-effect:non-scaling-stroke;}
+.city-name{font:700 7px Nunito,sans-serif;fill:#4a2545;paint-order:stroke;stroke:#fff;stroke-width:3px;stroke-linejoin:round;}
+.city-list{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:12px;}
+.city-chip{
+  border:1px solid rgba(201,53,113,.13);background:rgba(255,255,255,.85);
+  border-radius:12px;padding:8px 6px;text-align:center;font-size:.72rem;font-weight:800;color:var(--plum);
+  cursor:pointer;transition:.18s;
+}
+.city-chip:hover,.city-chip.active{background:var(--pink-light);color:var(--pink-deep);transform:translateY(-2px);}
+.map-note{margin:10px 0 0;text-align:center;color:var(--plum-soft);font-size:.78rem;}
+
+</style>
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVEGACIÓN
+       ============================================================ -->
+  <nav class="navbar" aria-label="Navegación principal">
+    <span class="brand">💗 Pierina & Jose</span>
+    <a href="#inicio">Inicio</a>
+    <a href="#historia">Nuestra historia</a>
+    <a href="#frasco">Frasco de amor</a>
+    <a href="#mapa">Viajes</a>
+    <a href="#actividades">Actividades para ti</a>
+  </nav>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <div class="hero" id="inicio">
+    <div class="float-hearts" aria-hidden="true">
+      <span style="top:10%; left:8%; animation-delay:0s;">💗</span>
+      <span style="top:20%; left:88%; animation-delay:2s;">💙</span>
+      <span style="top:65%; left:4%; animation-delay:4s;">💕</span>
+      <span style="top:70%; left:92%; animation-delay:1s;">💛</span>
+    </div>
+    <span class="eyebrow">Un espacio solo para ti</span>
+    <h1>Para <em>Pierina</em>,<br>con todo mi corazón</h1>
+    <p class="lead">Aquí guardo pedacitos de lo que siento por ti. Cuando el día pese, ven, abre el frasco y elige una notita. Yo la escribí pensando en ti.</p>
+  </div>
+
+  <!-- ============================================================
+       CONTADOR DE RELACIÓN
+       ============================================================ -->
+  <section id="contador" class="center">
+    <span class="eyebrow">Nuestro tiempo juntos</span>
+    <h2>Llevamos amándonos...</h2>
+    <div class="counter-grid" id="counterGrid"></div>
+  </section>
+
+  <!-- ============================================================
+       NUESTRA HISTORIA
+       ============================================================ -->
+  <section id="historia">
+    <div class="center">
+      <span class="eyebrow">Nuestra historia</span>
+      <h2>Cómo empezó todo</h2>
+    </div>
+    <div class="story-grid">
+      <article class="story-card" tabindex="0" role="button" aria-expanded="false">
+        <div class="story-card-inner">
+          <div class="story-face front">
+            <span class="story-icon">💫</span>
+            <h3>Cómo nos conocimos</h3>
+            <p>Un recuerdo que merece abrirse con calma.</p>
+            <span class="story-hint">Toca para descubrir nuestra historia ✨</span>
+          </div>
+          <div class="story-face back">
+            <span class="story-icon">💫</span>
+            <h3>Cómo nos conocimos</h3>
+            <p>Nos conocimos hace varios años en la academia, cuando ninguno de los dos imaginaba lo que vendría después. Al principio solo éramos amigos, de esos que se sacan una sonrisa entre clase y clase. Con el tiempo, esa amistad se convirtió en algo mucho más grande: aprendí a ver lo linda que eras, no solo por fuera, sino en cómo tratabas a los demás, en tu bondad, en tu manera de ser. Un día simplemente supe que quería estar a tu lado de otra forma, y desde entonces no he dejado de elegirte.</p>
+            <span class="story-close-hint">Toca para volver a cerrar</span>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" tabindex="0" role="button" aria-expanded="false">
+        <div class="story-card-inner">
+          <div class="story-face front">
+            <span class="story-icon">🏡</span>
+            <h3>Nuestros planes a futuro</h3>
+            <p>Un pedacito de todo lo que todavía nos queda por vivir.</p>
+            <span class="story-hint">Toca para descubrir nuestros sueños 💕</span>
+          </div>
+          <div class="story-face back">
+            <span class="story-icon">🏡</span>
+            <h3>Nuestros planes a futuro</h3>
+            <p>Soñamos con una casita que sea nuestra, un lugar donde ambos podamos llegar y sentirnos en casa de verdad. Queremos formar una familia juntos, tener hijos, y construir día a día la vida que los dos merecemos, con toda la calma y el amor que a veces el mundo no nos dio antes. No tengo prisa, pero sí tengo la certeza: quiero recorrer ese camino contigo, paso a paso, tomados de la mano.</p>
+            <span class="story-close-hint">Toca para volver a cerrar</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FRASCO DE VIDRIO CON NOTITAS
+       ============================================================ -->
+  <section class="jar-wrap" id="frasco">
+    <p class="jar-instructions">Primero abre la tapita del frasco. Después toca cualquier notita para descubrir el mensaje que guardé para ti.</p>
+    <div class="jar-stage" aria-label="Frasco de notitas">
+      <div class="jar-real closed" id="jarReal">
+        <div class="jar-body" id="jarBody">
+          <div class="notes-layer" id="notesLayer" role="list" aria-label="Notitas para Pierina"></div>
+          <div class="jar-rim"></div>
+        </div>
+        <div class="jar-neck"></div>
+        <button class="jar-lid" id="jarLid" type="button" aria-label="Abrir tapita del frasco" aria-expanded="false">
+          <span class="jar-lid-label" id="jarLidLabel">Toca para abrir</span>
+        </button>
+      </div>
+    </div>
+    <p class="jar-count" id="jarCount"></p>
+  </section>
+
+  <!-- ============================================================
+       LEYENDA DE COLORES
+       ============================================================ -->
+  <section id="leyenda">
+    <div class="center">
+      <span class="eyebrow">Guía del frasco</span>
+      <h2>Cada color es para un momento distinto</h2>
+    </div>
+    <div class="legend" id="legendGrid"></div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><hr></div>
+
+  <!-- ============================================================
+       CARRUSEL DE FOTOS
+       ============================================================ -->
+  <section id="fotos">
+    <div class="center">
+      <span class="eyebrow">Nuestros recuerdos</span>
+      <h2>Momentos juntos</h2>
+    </div>
+    <div class="carousel">
+      <button class="car-btn prev" id="carPrev" aria-label="Foto anterior">‹</button>
+      <div class="car-track-wrap">
+        <div class="car-track" id="carTrack"></div>
+      </div>
+      <button class="car-btn next" id="carNext" aria-label="Foto siguiente">›</button>
+    </div>
+    <div class="car-dots" id="carDots"></div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><hr></div>
+
+  <!-- ============================================================
+       MAPA / ROMPECABEZAS DE PERÚ
+       ============================================================ -->
+  <section id="mapa">
+    <div class="center">
+      <span class="eyebrow">Nuestro mapa de aventuras</span>
+      <h2>Perú, pieza por pieza 🇵🇪</h2>
+      <p class="activities-lead">Ahora sí: un mapa del Perú dividido por departamentos, con algunas de las ciudades más importantes. Toca un departamento para marcarlo como visitado.</p>
+    </div>
+    <div class="peru-map-shell">
+      <div class="map-toolbar">
+        <span class="map-status" id="mapStatus">0 de 25 departamentos visitados</span>
+        <button class="map-reset" id="mapReset" type="button">Reiniciar visitas</button>
+      </div>
+      <div class="peru-map" id="peruMap" aria-label="Mapa interactivo del Perú"></div>
+      <div class="city-list" id="cityList"></div>
+      <p class="map-note">Las ciudades son puntos de referencia; los departamentos se pueden seleccionar directamente en el mapa.</p>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"><hr></div>
+
+  <div class="album-viewer" id="albumViewer" aria-hidden="true">
+    <div class="album-modal" role="dialog" aria-modal="true" aria-labelledby="albumTitle">
+      <div class="album-modal-head">
+        <h3 id="albumTitle">Álbum de viaje</h3>
+        <button class="album-close" id="albumClose" type="button" aria-label="Cerrar álbum">✕</button>
+      </div>
+      <div id="albumSubtitle" class="map-note" style="margin-top:0; margin-bottom:12px; text-align:left;"></div>
+      <div class="album-photos" id="albumPhotos"></div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       ACTIVIDADES PARA DESESTRESAR
+       ============================================================ -->
+  <section id="actividades">
+    <h2 class="activities-title center">Un ratito para respirar</h2>
+    <p class="activities-lead">Antes o después de leer una notita, si quieres, quédate un momento aquí. Estas técnicas ayudan a calmarte en el momento, pero no reemplazan lo que trabajas con tu psicóloga.</p>
+
+    <div class="activities-grid">
+      <!-- Actividad 1: respiración guiada -->
+      <div class="activity-card">
+        <h3>Respira conmigo</h3>
+        <p>Sigue el círculo: inhala mientras crece, exhala mientras baja.</p>
+        <div class="breathe-circle" id="breatheCircle">Inhala</div>
+        <button class="breathe-btn" id="breatheBtn">Empezar</button>
+      </div>
+
+      <!-- Actividad 2: papel burbuja -->
+      <div class="activity-card">
+        <h3>Papel burbuja</h3>
+        <p>Revienta las burbujitas, una por una, sin apuro.</p>
+        <div class="bubble-grid" id="bubbleGrid"></div>
+        <button class="reset-btn" id="resetBubbles">Reiniciar</button>
+      </div>
+
+      <!-- Actividad 3: técnica de anclaje 5-4-3-2-1 (grounding) -->
+      <div class="activity-card">
+        <h3>Técnica 5-4-3-2-1</h3>
+        <p>Muy usada para bajar ataques de pánico. Te trae de vuelta al presente.</p>
+        <div class="grounding-box" id="groundingBox">
+          <span class="grounding-num" id="groundingNum">5</span>
+          <p class="grounding-text" id="groundingText">Toca "Comenzar" cuando estés lista.</p>
+        </div>
+        <button class="breathe-btn" id="groundingBtn">Comenzar</button>
+      </div>
+
+      <!-- Actividad 4: relajación muscular progresiva -->
+      <div class="activity-card">
+        <h3>Relajación muscular</h3>
+        <p>Tensa y suelta cada grupo muscular. Ayuda a bajar la tensión física de la ansiedad.</p>
+        <div class="grounding-box" id="pmrBox">
+          <span class="grounding-num" id="pmrTimer">--</span>
+          <p class="grounding-text" id="pmrText">Toca "Comenzar" cuando estés lista.</p>
+        </div>
+        <button class="breathe-btn" id="pmrBtn">Comenzar</button>
+      </div>
+
+      <!-- ============================================================
+           Para agregar una nueva actividad en el futuro:
+           copia un <div class="activity-card">...</div> completo,
+           dale su propio título, descripción y lógica en JS abajo,
+           en la sección "NUEVAS ACTIVIDADES AQUÍ".
+           ============================================================ -->
+    </div>
+  </section>
+
+  <footer>
+    <p class="heart-sign">💗</p>
+    <p>Hecha con todo mi amor para ti, Pierina.</p>
+  </footer>
+
+  <!-- ============================================================
+       MODAL: notita abierta
+       ============================================================ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-card" id="modalCard">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar notita">✕</button>
+      <span class="tag" id="modalTag"></span>
+      <p class="msg" id="modalMsg"></p>
+    </div>
+  </div>
+
+<script>
+/* ================================================================
+   ============  FECHA DE INICIO DE LA RELACIÓN  ===================
+   ================================================================
+   Cámbiala si no es exacta. Calculada para dar 1 año, 7 meses y
+   7 días el 17 de agosto de 2026.
+   ================================================================ */
+const RELATIONSHIP_START = new Date('2025-01-10T00:00:00');
+
+/* ================================================================
+   ============  ZONA EDITABLE: AQUÍ AGREGAS SUS FOTOS  ============
+   ================================================================
+   1. Crea una carpeta llamada "images" al lado de este archivo
+      index.html.
+   2. Copia ahí sus fotos (jpg o png).
+   3. Agrega una línea aquí por cada foto, con el nombre de archivo
+      exacto y una frase corta.
+   Si no agregas ninguna, se muestra un corazón de ejemplo.
+   ================================================================ */
+const PHOTOS = [
+  { src:"images/foto1.jpg", caption:"Nuestro primer recuerdo juntos" },
+  { src:"images/foto2.jpg", caption:"Uno de mis días favoritos contigo" },
+  { src:"images/foto3.jpg", caption:"Aquí te amé un poquito más" },
+];
+
+const TRIPS = [
+  { city:"Lima", department:"Lima", cover:"images/lima.jpg", photos:[
+    { src:"images/lima-1.jpg", caption:"Miraflores" },
+    { src:"images/lima-2.jpg", caption:"Paseo por la ciudad" },
+    { src:"images/lima-3.jpg", caption:"Un momento para nosotros" }
+  ]},
+  { city:"Cusco", department:"Cusco", cover:"images/cusco.jpg", photos:[
+    { src:"images/cusco-1.jpg", caption:"Callecitas y recuerdos" },
+    { src:"images/cusco-2.jpg", caption:"Atardecer juntos" },
+    { src:"images/cusco-3.jpg", caption:"Nuestro paseo" }
+  ]},
+  { city:"Arequipa", department:"Arequipa", cover:"images/arequipa.jpg", photos:[
+    { src:"images/arequipa-1.jpg", caption:"Volcán y cielo" },
+    { src:"images/arequipa-2.jpg", caption:"Momentos de risas" },
+    { src:"images/arequipa-3.jpg", caption:"Juntos en la ciudad" }
+  ]},
+  { city:"Trujillo", department:"La Libertad", cover:"images/trujillo.jpg", photos:[
+    { src:"images/trujillo-1.jpg", caption:"Paseo litoral" },
+    { src:"images/trujillo-2.jpg", caption:"Un recuerdo especial" },
+    { src:"images/trujillo-3.jpg", caption:"Cielo y mar" }
+  ]}
+];
+
+/* ================================================================
+   ============  ZONA EDITABLE: AQUÍ AGREGAS TUS NOTITAS  ==========
+   ================================================================
+   Para agregar una notita nueva, copia una línea del arreglo NOTES
+   y cambia el "cat" (categoría) y el "text" (el mensaje).
+
+   Categorías disponibles:
+     "triste"     -> azul
+     "estres"     -> verde   (estresada o pensativa)
+     "dudas"      -> rosa    (dudas de la relación)
+     "dificil"    -> lila    (días difíciles)
+     "abrumada"   -> dorado  (abrumada por problemas)
+   ================================================================ */
+const NOTES = [
+  { cat:"triste",   text:"Está bien llorar, mi amor. Yo sigo aquí, antes, durante y después de cada lágrima." },
+  { cat:"triste",   text:"Tu tristeza no me asusta ni me aleja. Ven, te abrazo aunque sea con este mensaje." },
+  { cat:"triste",   text:"No tienes que sonreír para mí. Solo tienes que ser tú, y eso ya me basta." },
+
+  { cat:"estres",   text:"Respira conmigo: inhala, sostén, exhala. Yo cuento contigo, despacio, sin prisa." },
+  { cat:"estres",   text:"Tu mente da muchas vueltas, lo sé. Pero yo no me voy a ir de tu lado en ninguna de ellas." },
+  { cat:"estres",   text:"Todo lo que pesa hoy, mañana pesa un poco menos. Y yo te ayudo a cargarlo." },
+
+  { cat:"dudas",    text:"Un año y medio contigo y sigo eligiéndote cada día, sin dudarlo ni un segundo." },
+  { cat:"dudas",    text:"Si dudas de nosotros, mira todo lo que ya superamos juntos. Eso también es amor real." },
+  { cat:"dudas",    text:"No busco a alguien perfecto, te busco a ti. Y ya te encontré, Pierina." },
+
+  { cat:"dificil",  text:"Hoy no tienes que ser fuerte. Hoy solo tienes que dejarme cuidarte a mí." },
+  { cat:"dificil",  text:"Ni tú te aguantas hoy, lo entiendo. Pero yo sí te aguanto, con amor, siempre." },
+  { cat:"dificil",  text:"Este día difícil también va a pasar. Y yo voy a seguir aquí cuando pase." },
+
+  { cat:"abrumada", text:"Un problema a la vez, mi amor. No tienes que resolverlo todo hoy." },
+  { cat:"abrumada", text:"Eres la persona más valiente que conozco, aunque hoy no lo sientas así." },
+  { cat:"abrumada", text:"Cuando todo se sienta demasiado, solo llámame. Yo bajo el volumen contigo." },
+];
+
+/* Metadatos de cada categoría: color, etiqueta y descripción de la leyenda */
+const CATEGORIES = {
+  triste:   { label:"Azul",    color:"var(--cat-triste)",   border:"var(--cat-triste-b)",   legend:"Abre este color cuando te sientas triste." },
+  estres:   { label:"Verde",   color:"var(--cat-estres)",   border:"var(--cat-estres-b)",   legend:"Abre este color cuando te sientas estresada o pensativa." },
+  dudas:    { label:"Rosa",    color:"var(--cat-dudas)",    border:"var(--cat-dudas-b)",    legend:"Abre este color cuando tengas dudas de nosotros." },
+  dificil:  { label:"Lila",    color:"var(--cat-dificil)",  border:"var(--cat-dificil-b)",  legend:"Abre este color en tus días difíciles, cuando ni tú te aguantes." },
+  abrumada: { label:"Dorado",  color:"var(--cat-abrumada)", border:"var(--cat-abrumada-b)", legend:"Abre este color cuando te sientas abrumada por los problemas." },
+};
+
+/* ================================================================
+   ============  ZONA EDITABLE: REGIONES DE PERÚ  ==================
+   ================================================================
+   Cambia "visited" a true cuando ya hayan ido juntos, y agrega el
+   nombre del archivo en "photo" (guardado en la carpeta "images",
+   igual que las fotos del carrusel) para que aparezca ahí.
+   El estado de "visitado" que ella marque en el navegador se
+   guarda solo, aunque cierre la página.
+   ================================================================ */
+function renderLegend() {
+  const legendGrid = document.getElementById('legendGrid');
+  if (!legendGrid) return;
+
+  legendGrid.innerHTML = Object.entries(CATEGORIES)
+    .map(([key, meta]) => `
+      <article class="legend-card" style="--card-color:${meta.color};">
+        <h3><span class="dot"></span>${meta.label}</h3>
+        <p>${meta.legend}</p>
+      </article>
+    `)
+    .join('');
+}
+
+const MAP_GEOJSON_URL = "https://raw.githubusercontent.com/juaneladio/peru-geojson/master/peru_departamental_simple.geojson";
+const MAJOR_CITIES = [
+  {name:"Lima",lat:-12.0464,lon:-77.0428},
+  {name:"Arequipa",lat:-16.4090,lon:-71.5375},
+  {name:"Trujillo",lat:-8.1116,lon:-79.0287},
+  {name:"Chiclayo",lat:-6.7714,lon:-79.8409},
+  {name:"Piura",lat:-5.1945,lon:-80.6328},
+  {name:"Cusco",lat:-13.5319,lon:-71.9675},
+  {name:"Iquitos",lat:-3.7437,lon:-73.2516},
+  {name:"Huancayo",lat:-12.0651,lon:-75.2049},
+  {name:"Chimbote",lat:-9.0745,lon:-78.5936},
+  {name:"Tacna",lat:-18.0147,lon:-70.2536},
+  {name:"Ica",lat:-14.0678,lon:-75.7286},
+  {name:"Pucallpa",lat:-8.3791,lon:-74.5539},
+  {name:"Juliaca",lat:-15.4997,lon:-70.1333},
+  {name:"Cajamarca",lat:-7.1617,lon:-78.5128},
+  {name:"Ayacucho",lat:-13.1631,lon:-74.2236}
+];
+
+/* ================================================================
+   Geometría del corazón: unión de 2 círculos (lóbulos) + triángulo
+   (cusp). Coordenadas normalizadas 0–1, con margen para que las
+   notitas nunca se salgan del vidrio dibujado en el SVG.
+   ================================================================ */
+function randomPointInJar(){
+  let x,y,tries=0;
+  do{
+    x = 0.12 + Math.random()*0.76;
+    y = 0.38 + Math.random()*0.48;
+    tries++;
+  }while(tries<50 && !(
+    ((x-0.5)/0.46)**2 + ((y-0.62)/0.38)**2 < 1
+  ));
+  return {x,y};
+}
+
+/* ================================================================
+   Render del frasco
+   ================================================================ */
+const notesLayer = document.getElementById('notesLayer');
+const jarCount = document.getElementById('jarCount');
+const jarReal = document.getElementById('jarReal');
+const jarLid = document.getElementById('jarLid');
+const jarLidLabel = document.getElementById('jarLidLabel');
+
+function noteInsideHeart(x, y) {
+  const dx = (x - 0.5) / 0.46;
+  const dy = (y - 0.62) / 0.38;
+  return (dx * dx + dy * dy < 1) && x > 0.08 && x < 0.92 && y > 0.18 && y < 0.9;
+}
+
+function findNotePosition(usedPositions) {
+  for (let attempt = 0; attempt < 500; attempt++) {
+    const candidate = { x: 0.18 + Math.random() * 0.64, y: 0.25 + Math.random() * 0.55 };
+    const tooClose = usedPositions.some(pos => Math.hypot((candidate.x - pos.x), (candidate.y - pos.y)) < 0.08);
+    if (!tooClose && noteInsideHeart(candidate.x, candidate.y)) {
+      return candidate;
+    }
+  }
+  return { x: 0.5, y: 0.5 };
+}
+
+function renderJar(){
+  notesLayer.innerHTML = "";
+  const usedPositions = [];
+
+  NOTES.forEach((note, i) => {
+    const pos = findNotePosition(usedPositions);
+    usedPositions.push(pos);
+
+    const meta = CATEGORIES[note.cat];
+    const el = document.createElement('button');
+    el.className = 'note';
+    el.type = 'button';
+    el.setAttribute('role','listitem');
+    el.setAttribute('aria-label', `Notita ${meta.label}, número ${i+1}`);
+    el.style.left = (pos.x * 100) + '%';
+    el.style.top = (pos.y * 100) + '%';
+    el.style.setProperty('--n-color', meta.color);
+    el.style.setProperty('--n-color-b', meta.border);
+    el.style.setProperty('--rot', (Math.random() * 30 - 15) + 'deg');
+    el.style.setProperty('--delay', (Math.random() * 2) + 's');
+    el.style.setProperty('--i', i);
+    el.dataset.x = String(pos.x);
+    el.dataset.y = String(pos.y);
+
+    const startDrag = (event) => {
+      if (!jarReal.classList.contains('open')) {
+        jarLid.focus();
+        return;
+      }
+      event.preventDefault();
+      el.classList.add('dragging');
+      const rect = notesLayer.getBoundingClientRect();
+      const dragState = {
+        note: el,
+        offsetX: (event.clientX - rect.left) / rect.width - Number(el.dataset.x),
+        offsetY: (event.clientY - rect.top) / rect.height - Number(el.dataset.y)
+      };
+
+      const onMove = (moveEvent) => {
+        const innerRect = notesLayer.getBoundingClientRect();
+        let nextX = ((moveEvent.clientX - innerRect.left) / innerRect.width) - dragState.offsetX;
+        let nextY = ((moveEvent.clientY - innerRect.top) / innerRect.height) - dragState.offsetY;
+        nextX = Math.min(Math.max(nextX, 0.12), 0.88);
+        nextY = Math.min(Math.max(nextY, 0.22), 0.86);
+
+        const isInside = noteInsideHeart(nextX, nextY);
+        if (isInside) {
+          el.dataset.x = String(nextX);
+          el.dataset.y = String(nextY);
+          el.style.left = `${nextX * 100}%`;
+          el.style.top = `${nextY * 100}%`;
+        }
+      };
+
+      const onUp = () => {
+        el.classList.remove('dragging');
+        window.removeEventListener('pointermove', onMove);
+        window.removeEventListener('pointerup', onUp);
+      };
+
+      window.addEventListener('pointermove', onMove);
+      window.addEventListener('pointerup', onUp);
+    };
+
+    el.addEventListener('pointerdown', startDrag);
+    el.addEventListener('click', (event) => {
+      if (el.classList.contains('dragging')) {
+        event.preventDefault();
+        el.classList.remove('dragging');
+        return;
+      }
+      if(!jarReal.classList.contains('open')){
+        jarLid.focus();
+        return;
+      }
+      openNote(note);
+    });
+
+    notesLayer.appendChild(el);
+  });
+  jarCount.textContent = `${NOTES.length} notitas te esperan dentro del frasco`;
+}
+
+const albumViewer = document.getElementById('albumViewer');
+const albumTitle = document.getElementById('albumTitle');
+const albumSubtitle = document.getElementById('albumSubtitle');
+const albumPhotos = document.getElementById('albumPhotos');
+const albumClose = document.getElementById('albumClose');
+const ALBUM_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%23FFE3EF'/%3E%3Ctext x='200' y='175' font-size='80' text-anchor='middle'%3E%F0%9F%92%97%3C/text%3E%3C/svg%3E";
+
+function norm(v){
+  return String(v).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+}
+
+function openAlbum(place){
+  const trip = TRIPS.find(t => [t.city, t.department].some(v => norm(v) === norm(place)));
+  const title = trip ? trip.city : 'Aún no hay álbum para este lugar';
+  const subtitle = trip ? trip.department : place;
+  albumTitle.textContent = title;
+  albumSubtitle.textContent = subtitle;
+  albumPhotos.innerHTML = trip && trip.photos.length
+    ? trip.photos.map(p => `
+        <button class="album-photo" type="button">
+          <img src="${p.src}" alt="${p.caption}" onerror="this.src='${ALBUM_PLACEHOLDER}'">
+          <span>${p.caption}</span>
+        </button>
+      `).join('')
+    : '<div class="album-empty">💗 Todavía no has agregado fotos de este viaje.<br><small>Añádelas en el arreglo TRIPS del archivo.</small></div>';
+  albumViewer.classList.add('is-open');
+  albumViewer.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAlbum(){
+  albumViewer.classList.remove('is-open');
+  albumViewer.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+albumClose.addEventListener('click', closeAlbum);
+albumViewer.addEventListener('click', e => { if (e.target === albumViewer) closeAlbum(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeAlbum(); });
+
+/* ================================================================
+   Modal: abrir notita con brillitos dorados
+   ================================================================ */
+const modalOverlay = document.getElementById('modalOverlay');
+const modalCard = document.getElementById('modalCard');
+const modalTag = document.getElementById('modalTag');
+const modalMsg = document.getElementById('modalMsg');
+const modalClose = document.getElementById('modalClose');
+
+function spawnSparks(){
+  modalCard.querySelectorAll('.spark').forEach(s => s.remove());
+  const total = 14;
+  for(let i=0;i<total;i++){
+    const s = document.createElement('span');
+    s.className = 'spark';
+    const angle = Math.random()*Math.PI*2;
+    const dist = 60 + Math.random()*90;
+    s.style.setProperty('--dx', Math.cos(angle)*dist + 'px');
+    s.style.setProperty('--dy', Math.sin(angle)*dist + 'px');
+    s.style.animationDelay = (Math.random()*0.15) + 's';
+    modalCard.appendChild(s);
+  }
+}
+
+function openNote(note){
+  const meta = CATEGORIES[note.cat];
+  modalTag.textContent = meta.label;
+  modalTag.style.setProperty('--tag-color', meta.border);
+  modalMsg.textContent = note.text;
+  spawnSparks();
+  modalOverlay.classList.add('open');
+  modalClose.focus();
+}
+function closeModal(){
+  modalOverlay.classList.remove('open');
+}
+modalClose.addEventListener('click', closeModal);
+modalOverlay.addEventListener('click', (e) => { if(e.target === modalOverlay) closeModal(); });
+document.addEventListener('keydown', (e) => { if(e.key === 'Escape') closeModal(); });
+
+/* ================================================================
+   Actividad: respiración guiada (patrón 4-7-8, simplificado a 4-4)
+   ================================================================ */
+const breatheCircle = document.getElementById('breatheCircle');
+const breatheBtn = document.getElementById('breatheBtn');
+let breatheTimer = null, breathing = false;
+
+function breatheCycle(){
+  breatheCircle.classList.add('inhale');
+  breatheCircle.classList.remove('exhale');
+  breatheCircle.textContent = 'Inhala';
+  breatheTimer = setTimeout(() => {
+    breatheCircle.textContent = 'Sostén';
+    breatheTimer = setTimeout(() => {
+      breatheCircle.classList.remove('inhale');
+      breatheCircle.classList.add('exhale');
+      breatheCircle.textContent = 'Exhala';
+      breatheTimer = setTimeout(breatheCycle, 4000);
+    }, 2000);
+  }, 4000);
+}
+breatheBtn.addEventListener('click', () => {
+  breathing = !breathing;
+  if(breathing){
+    breatheBtn.textContent = 'Detener';
+    breatheCycle();
+  } else {
+    breatheBtn.textContent = 'Empezar';
+    clearTimeout(breatheTimer);
+    breatheCircle.classList.remove('inhale','exhale');
+    breatheCircle.textContent = 'Inhala';
+  }
+});
+
+/* ================================================================
+   Actividad: papel burbuja
+   ================================================================ */
+const bubbleGrid = document.getElementById('bubbleGrid');
+const resetBubbles = document.getElementById('resetBubbles');
+function renderBubbles(){
+  bubbleGrid.innerHTML = "";
+  for(let i=0;i<28;i++){
+    const b = document.createElement('div');
+    b.className = 'bubble';
+    b.addEventListener('click', () => b.classList.add('popped'));
+    bubbleGrid.appendChild(b);
+  }
+}
+resetBubbles.addEventListener('click', renderBubbles);
+
+/* ================================================================
+   CONTADOR DE RELACIÓN — en vivo, cada segundo
+   ================================================================ */
+const counterGrid = document.getElementById('counterGrid');
+function updateCounter(){
+  const now = new Date();
+  let y = now.getFullYear() - RELATIONSHIP_START.getFullYear();
+  let m = now.getMonth() - RELATIONSHIP_START.getMonth();
+  let d = now.getDate() - RELATIONSHIP_START.getDate();
+  let hh = now.getHours() - RELATIONSHIP_START.getHours();
+  let mm = now.getMinutes() - RELATIONSHIP_START.getMinutes();
+  let ss = now.getSeconds() - RELATIONSHIP_START.getSeconds();
+  if(ss<0){ ss+=60; mm--; }
+  if(mm<0){ mm+=60; hh--; }
+  if(hh<0){ hh+=24; d--; }
+  if(d<0){
+    const prevMonth = new Date(now.getFullYear(), now.getMonth(), 0);
+    d += prevMonth.getDate();
+    m--;
+  }
+  if(m<0){ m+=12; y--; }
+
+  const parts = [
+    { num:y, label:"Años" },
+    { num:m, label:"Meses" },
+    { num:d, label:"Días" }
+  ];
+  counterGrid.innerHTML = parts.map(p =>
+    `<div class="counter-box"><span class="num">${String(p.num).padStart(2,'0')}</span><span class="label">${p.label}</span></div>`
+  ).join('');
+}
+updateCounter();
+setInterval(updateCounter, 60000);
+
+/* ================================================================
+   CARRUSEL DE FOTOS
+   ================================================================ */
+const carTrack = document.getElementById('carTrack');
+const carDots = document.getElementById('carDots');
+const carPrev = document.getElementById('carPrev');
+const carNext = document.getElementById('carNext');
+let carIndex = 0;
+
+const HEART_PLACEHOLDER = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 150'%3E%3Crect width='200' height='150' fill='%23FFE3EF'/%3E%3Ctext x='100' y='90' font-size='50' text-anchor='middle'%3E%F0%9F%92%97%3C/text%3E%3C/svg%3E";
+
+function renderCarousel(){
+  carTrack.innerHTML = "";
+  carDots.innerHTML = "";
+  PHOTOS.forEach((p, i) => {
+    const slide = document.createElement('div');
+    slide.className = 'car-slide';
+    slide.innerHTML = `<img src="${p.src}" alt="${p.caption}" onerror="this.src='${HEART_PLACEHOLDER}'"><div class="caption">${p.caption}</div>`;
+    carTrack.appendChild(slide);
+
+    const dot = document.createElement('button');
+    dot.className = 'car-dot' + (i===0 ? ' active' : '');
+    dot.setAttribute('aria-label', `Ir a la foto ${i+1}`);
+    dot.addEventListener('click', () => goToSlide(i));
+    carDots.appendChild(dot);
+  });
+}
+function goToSlide(i){
+  carIndex = (i + PHOTOS.length) % PHOTOS.length;
+  carTrack.style.transform = `translateX(-${carIndex*100}%)`;
+  [...carDots.children].forEach((d,idx) => d.classList.toggle('active', idx===carIndex));
+}
+carPrev.addEventListener('click', () => goToSlide(carIndex-1));
+carNext.addEventListener('click', () => goToSlide(carIndex+1));
+renderCarousel();
+
+/* ================================================================
+   MAPA INTERACTIVO DE PERÚ
+   ================================================================ */
+const peruMap = document.getElementById('peruMap');
+const mapStatus = document.getElementById('mapStatus');
+const mapReset = document.getElementById('mapReset');
+const cityList = document.getElementById('cityList');
+const MAP_VISITED_KEY = 'pierina_departamentos_visitados';
+
+let peruGeo = null;
+let visitedDepartments = new Set(JSON.parse(localStorage.getItem(MAP_VISITED_KEY) || '[]'));
+
+function saveMapState(){
+  localStorage.setItem(MAP_VISITED_KEY, JSON.stringify([...visitedDepartments]));
+}
+
+function projectPoint(lon, lat, bounds, width, height){
+  const pad = 5;
+  const x = pad + ((lon-bounds.minLon)/(bounds.maxLon-bounds.minLon))*(width-pad*2);
+  const y = pad + ((bounds.maxLat-lat)/(bounds.maxLat-bounds.minLat))*(height-pad*2);
+  return [x,y];
+}
+
+function ringToPath(ring,bounds,w,h){
+  return ring.map((p,i)=>{
+    const [x,y]=projectPoint(p[0],p[1],bounds,w,h);
+    return `${i?'L':'M'}${x.toFixed(2)},${y.toFixed(2)}`;
+  }).join(' ')+' Z';
+}
+
+function geometryToPath(geometry,bounds,w,h){
+  if(geometry.type==='Polygon'){
+    return geometry.coordinates.map(r=>ringToPath(r,bounds,w,h)).join(' ');
+  }
+  if(geometry.type==='MultiPolygon'){
+    return geometry.coordinates.flatMap(poly=>poly.map(r=>ringToPath(r,bounds,w,h))).join(' ');
+  }
+  return '';
+}
+
+function geoBounds(features){
+  let minLon=Infinity,maxLon=-Infinity,minLat=Infinity,maxLat=-Infinity;
+  const visit=c=>{
+    if(Array.isArray(c[0])){
+      c.forEach(visit);
+    }else{
+      minLon=Math.min(minLon,c[0]); maxLon=Math.max(maxLon,c[0]);
+      minLat=Math.min(minLat,c[1]); maxLat=Math.max(maxLat,c[1]);
+    }
+  };
+  features.forEach(f=>visit(f.geometry.coordinates));
+  return {minLon,maxLon,minLat,maxLat};
+}
+
+function centroid(feature){
+  let pts=[];
+  const collect=c=>Array.isArray(c[0])?c.forEach(collect):pts.push(c);
+  collect(feature.geometry.coordinates);
+  const lon=pts.reduce((a,p)=>a+p[0],0)/pts.length;
+  const lat=pts.reduce((a,p)=>a+p[1],0)/pts.length;
+  return [lon,lat];
+}
+
+function renderCityList(){
+  cityList.innerHTML='';
+  MAJOR_CITIES.forEach(city=>{
+    const b=document.createElement('button');
+    b.type='button'; b.className='city-chip';
+    b.textContent=city.name;
+    b.addEventListener('click',()=>{
+      highlightCity(city.name);
+      openAlbum(city.name);
+    });
+    cityList.appendChild(b);
+  });
+}
+
+function highlightCity(name){
+  document.querySelectorAll('.city-marker').forEach(m=>m.classList.toggle('active', m.dataset.city === name));
+  document.querySelectorAll('.city-chip').forEach(c=>c.classList.toggle('active', c.textContent === name));
+  const marker=document.querySelector(`.city-marker[data-city="${CSS.escape(name)}"]`);
+  if(marker){
+    marker.scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+}
+
+function renderPeruMap(){
+  if(!peruGeo) return;
+  const W=900,H=650;
+  const bounds=geoBounds(peruGeo.features);
+  const padLon=(bounds.maxLon-bounds.minLon)*.035;
+  const padLat=(bounds.maxLat-bounds.minLat)*.035;
+  bounds.minLon-=padLon; bounds.maxLon+=padLon; bounds.minLat-=padLat; bounds.maxLat+=padLat;
+
+  const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');
+  svg.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  svg.setAttribute('role','img');
+  svg.setAttribute('aria-label','Mapa de los departamentos del Perú');
+
+  const defs=document.createElementNS('http://www.w3.org/2000/svg','defs');
+  defs.innerHTML='<filter id="mapShadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".12"/></filter>';
+  svg.appendChild(defs);
+
+  peruGeo.features.forEach(feature=>{
+    const name=feature.properties.NOMBDEP || feature.properties.NOMB_DEP || 'Departamento';
+    const path=document.createElementNS('http://www.w3.org/2000/svg','path');
+    path.setAttribute('d',geometryToPath(feature.geometry,bounds,W,H));
+    path.dataset.dept=name;
+    path.setAttribute('class','dept-shape'+(visitedDepartments.has(name)?' visited':''));
+    path.setAttribute('aria-label',name);
+    path.addEventListener('click',()=>{
+      visitedDepartments.has(name)?visitedDepartments.delete(name):visitedDepartments.add(name);
+      saveMapState();
+      renderPeruMap();
+      openAlbum(name);
+    });
+    svg.appendChild(path);
+
+    const [lon,lat]=centroid(feature);
+    const [x,y]=projectPoint(lon,lat,bounds,W,H);
+    const label=document.createElementNS('http://www.w3.org/2000/svg','text');
+    label.setAttribute('x',x);label.setAttribute('y',y);label.setAttribute('class','dept-label');
+    label.textContent=name.replace('DE','');
+    svg.appendChild(label);
+  });
+
+  MAJOR_CITIES.forEach(city=>{
+    const [x,y]=projectPoint(city.lon,city.lat,bounds,W,H);
+    const g=document.createElementNS('http://www.w3.org/2000/svg','g');
+    g.setAttribute('class','city-marker');
+    g.dataset.city=city.name;
+    g.setAttribute('transform',`translate(${x},${y})`);
+    g.innerHTML=`<circle class="city-dot" r="3.2"></circle><text class="city-name" x="6" y="3">${city.name}</text>`;
+    g.addEventListener('click',()=>{
+      highlightCity(city.name);
+      openAlbum(city.name);
+    });
+    svg.appendChild(g);
+  });
+
+  peruMap.innerHTML='';
+  peruMap.appendChild(svg);
+  const total=peruGeo.features.length;
+  mapStatus.textContent=`${visitedDepartments.size} de ${total} departamentos visitados`;
+}
+
+async function initPeruMap(){
+  renderCityList();
+  try{
+    const res=await fetch(MAP_GEOJSON_URL);
+    if(!res.ok) throw new Error('No se pudo cargar el mapa');
+    peruGeo=await res.json();
+    renderPeruMap();
+  }catch(err){
+    peruMap.innerHTML='<div style="height:100%;display:grid;place-items:center;padding:30px;text-align:center;color:#8a5d7e"><div><strong>🇵🇪 El mapa necesita conexión a internet</strong><br><small>Recarga la página con conexión para cargar los límites departamentales.</small></div></div>';
+  }
+}
+mapReset.addEventListener('click',()=>{
+  visitedDepartments.clear();
+  saveMapState();
+  renderPeruMap();
+});
+initPeruMap();
+
+/* ================================================================
+   TÉCNICA 5-4-3-2-1 (grounding) — interactiva
+   ================================================================ */
+const groundingSteps = [
+  { n:5, text:"cosas que puedes VER a tu alrededor" },
+  { n:4, text:"cosas que puedes TOCAR ahora mismo" },
+  { n:3, text:"cosas que puedes OÍR" },
+  { n:2, text:"cosas que puedes OLER" },
+  { n:1, text:"cosa que puedes SABOREAR" },
+];
+const groundingNum = document.getElementById('groundingNum');
+const groundingText = document.getElementById('groundingText');
+const groundingBtn = document.getElementById('groundingBtn');
+let groundingStep = -1;
+
+function showGroundingStep(){
+  if(groundingStep >= groundingSteps.length){
+    groundingNum.textContent = '💗';
+    groundingText.textContent = 'Muy bien. Estás aquí, estás a salvo, y yo estoy contigo.';
+    groundingBtn.textContent = 'Volver a empezar';
+    groundingStep = -1;
+    return;
+  }
+  const s = groundingSteps[groundingStep];
+  groundingNum.textContent = s.n;
+  groundingText.textContent = `Nombra ${s.n} ${s.text}`;
+  groundingBtn.textContent = groundingStep === groundingSteps.length-1 ? 'Terminar' : 'Siguiente';
+}
+groundingBtn.addEventListener('click', () => {
+  groundingStep++;
+  showGroundingStep();
+});
+
+/* ================================================================
+   RELAJACIÓN MUSCULAR PROGRESIVA — guiada con temporizador
+   ================================================================ */
+const pmrGroups = ["Manos y puños","Brazos","Hombros","Cara","Abdomen","Piernas y pies"];
+const pmrTimerEl = document.getElementById('pmrTimer');
+const pmrTextEl = document.getElementById('pmrText');
+const pmrBtn = document.getElementById('pmrBtn');
+let pmrRunning = false;
+let pmrInterval = null;
+
+function runPmrPhase(groupIndex, phase){
+  if(!pmrRunning) return;
+  if(groupIndex >= pmrGroups.length){
+    pmrTextEl.textContent = 'Listo. Nota cómo se siente tu cuerpo ahora, más liviano.';
+    pmrTimerEl.textContent = '💗';
+    pmrRunning = false;
+    pmrBtn.textContent = 'Empezar';
+    return;
+  }
+  const group = pmrGroups[groupIndex];
+  const duration = phase === 'tensa' ? 5 : 10;
+  let remaining = duration;
+  pmrTextEl.textContent = phase === 'tensa'
+    ? `Tensa: ${group}`
+    : `Suelta y relaja: ${group}`;
+  pmrTimerEl.textContent = remaining;
+  clearInterval(pmrInterval);
+  pmrInterval = setInterval(() => {
+    remaining--;
+    if(remaining <= 0){
+      clearInterval(pmrInterval);
+      if(phase === 'tensa'){
+        runPmrPhase(groupIndex, 'suelta');
+      } else {
+        runPmrPhase(groupIndex+1, 'tensa');
+      }
+    } else {
+      pmrTimerEl.textContent = remaining;
+    }
+  }, 1000);
+}
+pmrBtn.addEventListener('click', () => {
+  if(pmrRunning){
+    pmrRunning = false;
+    clearInterval(pmrInterval);
+    pmrTextEl.textContent = 'Toca "Comenzar" cuando estés lista.';
+    pmrTimerEl.textContent = '--';
+    pmrBtn.textContent = 'Empezar';
+  } else {
+    pmrRunning = true;
+    pmrBtn.textContent = 'Detener';
+    runPmrPhase(0, 'tensa');
+  }
+});
+
+/* ================================================================
+   NUEVAS ACTIVIDADES AQUÍ
+   Agrega tu lógica JS para futuras actividades en este espacio.
+   ================================================================ */
+
+jarLid.addEventListener('click', () => {
+  const isOpen = jarReal.classList.toggle('open');
+  jarReal.classList.toggle('closed', !isOpen);
+  jarLid.classList.toggle('open', isOpen);
+  jarLid.setAttribute('aria-expanded', String(isOpen));
+  jarLid.setAttribute('aria-label', isOpen ? 'Cerrar tapita del frasco' : 'Abrir tapita del frasco');
+  jarLidLabel.textContent = isOpen ? 'Toca para cerrar' : 'Toca para abrir';
+  if(isOpen){
+    notesLayer.querySelectorAll('.note').forEach((n,i) => n.style.setProperty('--i',i));
+  }
+});
+
+document.querySelectorAll('.story-card').forEach(card => {
+  const toggleStory = () => {
+    const open = card.classList.toggle('is-open');
+    card.setAttribute('aria-expanded', String(open));
+  };
+  card.addEventListener('click', toggleStory);
+  card.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' '){
+      e.preventDefault();
+      toggleStory();
+    }
+  });
+});
+
+/* Inicializar todo */
+renderJar();
+renderLegend();
+renderBubbles();
+if (typeof renderAlbums === 'function') renderAlbums();
+</script>
+</body>
+</html>
